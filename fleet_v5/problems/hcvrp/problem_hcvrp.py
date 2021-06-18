@@ -147,67 +147,8 @@ class HCVRPDataset(Dataset):
 
             with open(filename, 'rb') as f:
                 data = pickle.load(f)  # (N, size+1, 2)
-                data_1_x_y = copy.deepcopy(data)
-                for i in range(len(data)):  # N
-                    data_1_x_y[i][0][0] = 1 - data_1_x_y[i][0][0]  # 1-x, y
-                    for j in range(len(data[i][1])):  # size
-                        data_1_x_y[i][1][j][0] = 1 - data_1_x_y[i][1][j][0]
-
-                data_x_1_y = copy.deepcopy(data)
-                for i in range(len(data)):  # N
-                    data_x_1_y[i][0][1] = 1 - data_x_1_y[i][0][1]  # x, 1-y
-                    for j in range(len(data[i][1])):  # size
-                        data_x_1_y[i][1][j][1] = 1 - data_x_1_y[i][1][j][1]
-
-                data_1_x_1_y = copy.deepcopy(data)
-                for i in range(len(data)):  # N
-                    data_1_x_1_y[i][0][0] = 1 - data_1_x_1_y[i][0][0]
-                    data_1_x_1_y[i][0][1] = 1 - data_1_x_1_y[i][0][1]  # 1-x, 1-y
-                    for j in range(len(data[i][1])):  # size
-                        data_1_x_1_y[i][1][j][0] = 1 - data_1_x_1_y[i][1][j][0]
-                        data_1_x_1_y[i][1][j][1] = 1 - data_1_x_1_y[i][1][j][1]
-
-                data_y_x = copy.deepcopy(data)
-                for i in range(len(data)):  # N
-                    data_y_x[i][0][0], data_y_x[i][0][1] = data_y_x[i][0][1], data_y_x[i][0][0]  # y, x
-                    for j in range(len(data[i][1])):  # size
-                        data_y_x[i][1][j][0], data_y_x[i][1][j][1] = data_y_x[i][1][j][1], data_y_x[i][1][j][0]
-
-                data_y_1_x = copy.deepcopy(data)
-                for i in range(len(data)):  # N
-                    data_y_1_x[i][0][0], data_y_1_x[i][0][1] = data_y_1_x[i][0][1], data_y_1_x[i][0][0]
-                    data_y_1_x[i][0][1] = 1 - data_y_1_x[i][0][1]  # y, 1-x
-                    for j in range(len(data[i][1])):  # size
-                        data_y_1_x[i][1][j][0], data_y_1_x[i][1][j][1] = data_y_1_x[i][1][j][1], data_y_1_x[i][1][j][0]
-                        data_y_1_x[i][1][j][1] = 1 - data_y_1_x[i][1][j][1]
-
-                data_1_y_x = copy.deepcopy(data)
-                for i in range(len(data)):  # N
-                    data_1_y_x[i][0][0], data_1_y_x[i][0][1] = data_1_y_x[i][0][1], data_1_y_x[i][0][0]
-                    data_1_y_x[i][0][0] = 1 - data_1_y_x[i][0][0]  # 1-y, x
-                    for j in range(len(data[i][1])):  # size
-                        data_1_y_x[i][1][j][0], data_1_y_x[i][1][j][1] = data_1_y_x[i][1][j][1], data_1_y_x[i][1][j][0]
-                        data_1_y_x[i][1][j][0] = 1 - data_1_y_x[i][1][j][0]
-
-                data_1_y_1_x = copy.deepcopy(data)
-                for i in range(len(data)):  # N
-                    data_1_y_1_x[i][0][0], data_1_y_1_x[i][0][1] = data_1_y_1_x[i][0][1], data_1_y_1_x[i][0][0]
-                    data_1_y_1_x[i][0][0] = 1 - data_1_y_1_x[i][0][0]  # 1-y, x
-                    data_1_y_1_x[i][0][1] = 1 - data_1_y_1_x[i][0][1]  # 1-y, x
-                    for j in range(len(data[i][1])):  # size
-                        data_1_y_1_x[i][1][j][0], data_1_y_1_x[i][1][j][1] = data_1_y_1_x[i][1][j][1], \
-                                                                             data_1_y_1_x[i][1][j][0]
-                        data_1_y_1_x[i][1][j][0] = 1 - data_1_y_1_x[i][1][j][0]
-                        data_1_y_1_x[i][1][j][1] = 1 - data_1_y_1_x[i][1][j][1]
 
             self.data = [make_instance(args) for args in data[offset:offset + num_samples]]
-            self.data += [make_instance(args) for args in data_1_x_y[offset:offset + num_samples]]
-            self.data += [make_instance(args) for args in data_x_1_y[offset:offset + num_samples]]
-            self.data += [make_instance(args) for args in data_1_x_1_y[offset:offset + num_samples]]
-            self.data += [make_instance(args) for args in data_y_x[offset:offset + num_samples]]
-            self.data += [make_instance(args) for args in data_y_1_x[offset:offset + num_samples]]
-            self.data += [make_instance(args) for args in data_1_y_x[offset:offset + num_samples]]
-            self.data += [make_instance(args) for args in data_1_y_1_x[offset:offset + num_samples]]
 
         else:
 
