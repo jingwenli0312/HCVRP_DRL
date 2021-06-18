@@ -47,12 +47,12 @@ Note that using multiple GPUs has limited efficiency for small problem sizes (up
 #### Warm start
 You can initialize a run using a pretrained model by using the `--load_path` option:
 ```bash
-python run.py --graph_size 100 --load_path pretrained/tsp_100/epoch-99.pt
+python run.py --graph_size 40 --load_path outputs/hcvrp40_rollout/hcvrp40_rollout_{datetime}/epoch-49.pt
 ```
 
 The `--load_path` option can also be used to load an earlier run, in which case also the optimizer state will be loaded:
 ```bash
-python run.py --graph_size 40 --load_path 'outputs/hcvrp40_rollout/hcvrp40_rollout_{datetime}/epoch-{num}.pt'
+python run.py --graph_size 40 --load_path outputs/hcvrp40_rollout/hcvrp40_rollout_{datetime}/epoch-{num}.pt
 ```
 
 
