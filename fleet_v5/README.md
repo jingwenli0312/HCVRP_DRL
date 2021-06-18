@@ -1,4 +1,4 @@
-# Deep Reinforcement Learning for Solving the Heterogeneous Capacitated Vehicle Routing Problem
+# Heterogeneous Fleet with Five Vehicles
 
 Attention based model for learning to solve the Heterogeneous Capacitated Vehicle Routing Problem (HCVRP) with both min-max and min-sum objective. Training with REINFORCE with greedy rollout baseline.
 
