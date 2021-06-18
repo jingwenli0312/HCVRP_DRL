@@ -70,4 +70,4 @@ python eval.py data/hcvrp/hcvrp_40_seed24610.pkl --model outputs/hcvrp40_rollout
 ```
 
 ## Acknowledgements
-Thanks to wouterkool/attention-learn-to-route for getting me started with the code for the Pointer Network.
+Thanks to [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) for getting me started with the code for the Pointer Network.
