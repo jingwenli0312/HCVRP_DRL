@@ -52,7 +52,7 @@ python run.py --graph_size 100 --load_path pretrained/tsp_100/epoch-99.pt
 
 The `--load_path` option can also be used to load an earlier run, in which case also the optimizer state will be loaded:
 ```bash
-python run.py --graph_size 20 --load_path 'outputs/hcvrp40_rollout/hcvrp40_rollout_{datetime}/epoch-{num}.pt'
+python run.py --graph_size 40 --load_path 'outputs/hcvrp40_rollout/hcvrp40_rollout_{datetime}/epoch-{num}.pt'
 ```
 
 
