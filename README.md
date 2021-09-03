@@ -3,7 +3,7 @@
 Attention based model for learning to solve the Heterogeneous Capacitated Vehicle Routing Problem (HCVRP) with both min-max and min-sum objective. Training with REINFORCE with greedy rollout baseline.
 
 ## Paper
-For more details, please see our paper [Deep Reinforcement Learning for Solving the Heterogeneous Capacitated Vehicle Routing Problem](https://github.com/Demon0312/HCVRP_DRL/blob/main/paper/paper.pdf) which has been accepted at [IEEE Transactions on Cybernetics]. If this code is useful for your work, please cite our paper:
+For more details, please see our paper： Jingwen Li, Yining Ma, Ruize Gao, Zhiguang Cao, Andrew Lim, Wen Song, Jie Zhang. [Deep Reinforcement Learning for Solving the Heterogeneous Capacitated Vehicle Routing Problem](https://github.com/Demon0312/HCVRP_DRL/blob/main/paper/paper.pdf). IEEE Transactions on Cybernetics, 2021. If this code is useful for your work, please cite our paper,
 
 ```
 @article{li2021hcvrp,
