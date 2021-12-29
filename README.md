@@ -16,10 +16,10 @@ For more details, please see our paper： Jingwen Li, Yining Ma, Ruize Gao, Zhig
 
 ## Dependencies
 
-* Python>=3.6
+* Python>=3.7
 * NumPy
 * SciPy
-* [PyTorch](http://pytorch.org/)=0.4
+* [PyTorch](http://pytorch.org/)=1.3.0
 * tqdm
 * [tensorboard_logger](https://github.com/TeamHG-Memex/tensorboard_logger)
 * Matplotlib (optional, only for plotting)
