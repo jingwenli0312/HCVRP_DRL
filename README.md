@@ -10,7 +10,12 @@ For more details, please see our paper： Jingwen Li, Yining Ma, Ruize Gao, Zhig
   title={Deep Reinforcement Learning for Solving the Heterogeneous Capacitated Vehicle Routing Problem},
   author={Li, Jingwen and Ma, Yining and Gao, Ruize and Cao, Zhiguang and Andrew, Lim and Song, Wen and Zhang, Jie},
   journal={IEEE Transactions on Cybernetics},
-  year={2021}
+  volume={52},
+  number={12},
+  pages={13572--13585},
+  year={2022},
+  publisher={IEEE}，
+  doi={10.1109/TCYB.2021.3111082}
 }
 ``` 
 
